@@ -1,6 +1,8 @@
 ### Code supporting Rice-fish co-culturing for schistosomiasis control and agricultural gains in Senegal
+## Occupational Hazard Analyses and Trial Results 
 ### Selland et al.
 
+## library packages
 library(glmmTMB)
 library(car)
 library(rstatix)
