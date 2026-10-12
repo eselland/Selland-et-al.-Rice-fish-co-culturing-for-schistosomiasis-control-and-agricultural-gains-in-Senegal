@@ -18,7 +18,6 @@ library(cowplot)
 ############
 ## Occupational Hazard
 hazard<-readxl::read_excel("occuhazard_indivlevel.xlsm",sheet = "occuhazard_indivlevel")
-#data<-readxl::read_excel("/Users/eselland/Documents/ND/PROJECT_Rice-Fish/RiceFish_manuscript/Data_tobeshared/occuhazard_indivlevel.xlsm",sheet = "occuhazard_indivlevel")
 hazard$landHectRICE.Hlog<-log(hazard$landHectRICE.H+0.1)
 hazard$Sm.pres<-as.numeric(hazard$Sm.pres) #4 children weren't tested for S. mansoni, they have NA values
 mansoni.prevalence<-glmmTMB(Sm.pres ~ age + landHectRICE.Hlog+ landareaIrri.V +RiverLake + pipedlaundry + KnownTreat + (1 | Village:Household),data=hazard,family=binomial())
